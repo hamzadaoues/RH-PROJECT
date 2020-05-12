@@ -1,0 +1,155 @@
+[
+  {
+    "class_name": "backend",
+    "skills": [
+      {
+        "skill_name": "javascript",
+        "skill_coef": 1
+      },
+      {
+        "skill_name": "sql",
+        "skill_coef": 3
+      },
+      {
+        "skill_name": "nosql",
+        "skill_coef": 2
+      },
+      {
+        "skill_name": "nodejs",
+        "skill_coef": 3
+      },
+      {
+        "skill_name": "expressjs",
+        "skill_coef": 3
+      },
+      {
+        "skill_name": "koajs",
+        "skill_coef": 1
+      },
+      {
+        "skill_name": "hapijs",
+        "skill_coef": 1
+      },
+      {
+        "skill_name": "angularjs",
+        "skill_coef": 1
+      },
+      {
+        "skill_name": "reactjs",
+        "skill_coef": 1
+      },
+      {
+        "skill_name": "jquery",
+        "skill_coef": 1
+      },
+      {
+        "skill_name": "bash",
+        "skill_coef": 1
+      },
+      {
+        "skill_name": "nginx",
+        "skill_coef": 1
+      },
+      {
+        "skill_name": "c",
+        "skill_coef": 1
+      },
+      {
+        "skill_name": "c++",
+        "skill_coef": 1
+      }
+    ]
+  },
+  {
+    "class_name": "frontend",
+    "skills": [
+      {
+        "skill_name": "javascript",
+        "skill_coef": 3
+      },
+      {
+        "skill_name": "html",
+        "skill_coef": 3
+      },
+      {
+        "skill_name": "css",
+        "skill_coef": 3
+      },
+      {
+        "skill_name": "restful",
+        "skill_coef": 3
+      },
+      {
+        "skill_name": "reactjs",
+        "skill_coef": 3
+      },
+      {
+        "skill_name": "sass",
+        "skill_coef": 1
+      },
+      {
+        "skill_name": "postcss",
+        "skill_coef": 1
+      },
+      {
+        "skill_name": "webpack",
+        "skill_coef": 1
+      },
+      {
+        "skill_name": "gitlab",
+        "skill_coef": 1
+      }
+    ]
+  }
+  ,
+  {
+    "class_name": "phpsymfony",
+    "skills": [
+      {
+        "skill_name": "php",
+        "skill_coef": 3
+      },
+      {
+        "skill_name": "symfony",
+        "skill_coef": 3
+      },
+      {
+        "skill_name": "restful",
+        "skill_coef": 2
+      },
+      {
+        "skill_name": "git",
+        "skill_coef": 2
+      }
+    ]
+  }  ,
+  {
+    "class_name": "ArchitecteJee",
+    "skills": [
+      {
+        "skill_name": "java",
+        "skill_coef": 3
+      },
+      {
+        "skill_name": "jee",
+        "skill_coef": 3
+      },
+      {
+        "skill_name": "microservices",
+        "skill_coef": 3
+      },
+      {
+        "skill_name": "integration",
+        "skill_coef": 3
+      },
+      {
+        "skill_name": "docker",
+        "skill_coef": 3
+      },
+      {
+        "skill_name": "aws",
+        "skill_coef": 3
+      }
+    ]
+  }
+]

@@ -4,7 +4,7 @@ from ReadDB import ReadDB
 import itertools
 
 DB_PATH = r'C:\Users\User\Desktop\PFA\database_brute.json'
-skills_list = ['java', 'expressjs']
+skills_list = ['git', 'scrum', 'testing', 'confluence', 'drupal', 'springboot']
 # This map will hold the list of matchers for each skill
 skills_matching_list = {}
 # Initialize list of matchers for each skill in the skills_list

@@ -21,10 +21,10 @@ class ReadDB:
         for job in profile['experiences']['jobs']:
             if job['description']:
                 text = text + job['description']
-                text = text + ''
+                text = text + ' '
             if job['title']:
                 text = text + job['title']
-                text = text + ''
+                text = text + ' '
         return self.skillExtractor.tokenization(text)
 
     # this method returns all words in the skills

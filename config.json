@@ -1,0 +1,8 @@
+{
+  "scoring": {
+    "skills": 1,
+    "summary": 1,
+    "headline": 2,
+    "experience": 3
+  }
+}
