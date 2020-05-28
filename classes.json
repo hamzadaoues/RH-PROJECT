@@ -1,6 +1,7 @@
 [
   {
     "class_name": "backend",
+    "score_max" : 168,
     "skills": [
       {
         "skill_name": "javascript",
@@ -62,6 +63,7 @@
   },
   {
     "class_name": "frontend",
+    "score_max" : 152,
     "skills": [
       {
         "skill_name": "javascript",
@@ -100,10 +102,10 @@
         "skill_coef": 1
       }
     ]
-  }
-  ,
+  },
   {
     "class_name": "phpsymfony",
+    "score_max" : 80,
     "skills": [
       {
         "skill_name": "php",
@@ -122,9 +124,10 @@
         "skill_coef": 2
       }
     ]
-  }  ,
+  },
   {
     "class_name": "ArchitecteJee",
+    "score_max" : 144,
     "skills": [
       {
         "skill_name": "java",
@@ -139,7 +142,7 @@
         "skill_coef": 3
       },
       {
-        "skill_name": "integration",
+        "skill_name": "ci",
         "skill_coef": 3
       },
       {
@@ -148,6 +151,196 @@
       },
       {
         "skill_name": "aws",
+        "skill_coef": 3
+      }
+    ]
+  },
+  {
+    "class_name": "Embedded",
+    "score_max" : 96,
+    "skills": [
+      {
+        "skill_name": "c",
+        "skill_coef": 2
+      },
+      {
+        "skill_name": "c++",
+        "skill_coef": 2
+      },
+      {
+        "skill_name": "linux",
+        "skill_coef": 3
+      },
+      {
+        "skill_name": "embedded",
+        "skill_coef": 5
+      }
+    ]
+  },
+  {
+    "class_name": "fullstackjs",
+    "score_max" : 208,
+    "skills": [
+      {
+        "skill_name": "fullstackjs",
+        "skill_coef": 4
+      },
+      {
+        "skill_name": "nodejs",
+        "skill_coef": 3
+      },
+      {
+        "skill_name": "javascript",
+        "skill_coef": 3
+      },
+      {
+        "skill_name": "angularjs",
+        "skill_coef": 3
+      },
+      {
+        "skill_name": "extjs",
+        "skill_coef": 3
+      },
+      {
+        "skill_name": "jquery",
+        "skill_coef": 2
+      },
+      {
+        "skill_name": "html",
+        "skill_coef": 2
+      },
+      {
+        "skill_name": "css",
+        "skill_coef": 2
+      },
+      {
+        "skill_name": "mongodb",
+        "skill_coef": 2
+      },
+      {
+        "skill_name": "mysql",
+        "skill_coef": 2
+      }
+    ]
+  },
+  {
+    "class_name": "java/jee",
+    "score_max" : 240,
+    "skills": [
+      {
+        "skill_name": "java",
+        "skill_coef": 3
+      },
+      {
+        "skill_name": "jee",
+        "skill_coef": 3
+      },
+      {
+        "skill_name": "spring",
+        "skill_coef": 3
+      },
+      {
+        "skill_name": "soa",
+        "skill_coef": 1
+      },
+      {
+        "skill_name": "soap",
+        "skill_coef": 1
+      },
+      {
+        "skill_name": "restful",
+        "skill_coef": 1
+      },
+      {
+        "skill_name": "microservices",
+        "skill_coef": 3
+      },
+      {
+        "skill_name": "git",
+        "skill_coef": 2
+      },
+      {
+        "skill_name": "svn",
+        "skill_coef": 2
+      },
+      {
+        "skill_name": "jira",
+        "skill_coef": 1
+      },
+      {
+        "skill_name": "confluence",
+        "skill_coef": 1
+      },
+      {
+        "skill_name": "springboot",
+        "skill_coef": 3
+      },
+      {
+        "skill_name": "springsecurity",
+        "skill_coef": 3
+      }
+    ]
+  },
+  {
+    "class_name": "DRUPAL",
+    "score_max" : 128,
+    "skills": [
+      {
+        "skill_name": "php",
+        "skill_coef": 3
+      },
+      {
+        "skill_name": "cms",
+        "skill_coef": 1
+      },
+      {
+        "skill_name": "drupal",
+        "skill_coef": 3
+      },
+      {
+        "skill_name": "html",
+        "skill_coef": 1
+      },
+      {
+        "skill_name": "css",
+        "skill_coef": 1
+      },
+      {
+        "skill_name": "mysql",
+        "skill_coef": 1
+      },
+      {
+        "skill_name": "symfony",
+        "skill_coef": 2
+      },
+      {
+        "skill_name": "javascript",
+        "skill_coef": 2
+      },
+      {
+        "skill_name": "git",
+        "skill_coef": 2
+      }
+    ]
+  },
+  {
+    "class_name": "PO",
+    "score_max" : 144,
+    "skills": [
+      {
+        "skill_name": "scrum",
+        "skill_coef": 6
+      },
+      {
+        "skill_name": "analyse",
+        "skill_coef": 3
+      },
+      {
+        "skill_name": "testing",
+        "skill_coef": 6
+      },
+      {
+        "skill_name": "redaction",
         "skill_coef": 3
       }
     ]

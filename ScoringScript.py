@@ -10,13 +10,13 @@ def score_profile_per_skill(profile, skill, config):
     summary = profile['summary']
     skills = profile['skills']
     if skills[skill]:
-        score_to_return = score_to_return + 1
+        score_to_return = score_to_return + config['skills']
     if summary[skill]:
-        score_to_return = score_to_return + 1
+        score_to_return = score_to_return + config['summary']
     if headline[skill]:
-        score_to_return = score_to_return + 2
+        score_to_return = score_to_return + config['headline']
     if experience[skill]:
-        score_to_return = score_to_return + 3
+        score_to_return = score_to_return + config['experience']
     return score_to_return
 
 
@@ -27,10 +27,10 @@ def score_profile_per_class(profile, classe, config):
     final_score = 0
     for skill in classe['skills']:
         final_score = final_score + score_profile_per_skill(profile, skill['skill_name'], config) * skill['skill_coef']
-    return final_score
+    return format((final_score / classe['score_max']) * 100, '.2f')
 
 
-DB_PATH = r'C:\Users\User\Desktop\PFA\classification\projet\1.json'
+DB_PATH = r'C:\Users\User\Desktop\PFA\classification\projet\sample_analyse_new_struct.json'
 CLASS_PATH = r'C:\Users\User\Desktop\PFA\classification\projet\classes.json'
 CONFIG_PATH = r'C:\Users\User\Desktop\PFA\classification\projet\config.json'
 # Load the classes ( JSON format )
@@ -50,11 +50,25 @@ f.close()
 
 profiles = []
 for profile in profile_list:
-    profile_affectation = {'id': profile['id']}
+    profile_affectation = {"id": profile['id']}
+    max_score = 0
+    class_name = False
     for classe in classes:
-        score = score_profile_per_class(profile, classe, config)
+        score = float(score_profile_per_class(profile, classe, config['scoring']))
         profile_affectation[classe['class_name']] = score
+        # Tag the profile with the appropriate class ( which hav the highest score )
+        if score > max_score:
+            max_score = score
+            class_name = classe['class_name']
+    profile_affectation['class_name'] = class_name
+    profile_affectation['score'] = max_score
     profiles.append(profile_affectation)
-df = pd.DataFrame(profiles)
-print(df)
-df.to_excel('result.xlsx')
+
+json_profiles = json.dumps(profiles)
+file = open('sample_analyse_result.json', "w")
+file.write(json_profiles)
+file.close()
+
+# For visualisation
+# df = pd.DataFrame(profiles)
+# df.to_excel('sample_analyse_result_4.xlsx')

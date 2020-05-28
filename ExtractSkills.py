@@ -34,7 +34,7 @@ class ExtractSkills:
 
     # This method checks if two words matches according to a threshold
     # The parameter subs : if True use parial_ratio for matching
-    def two_words_match(self, word1, word2, threshold, subs=True) -> bool:
+    def two_words_match(self, word1, word2, threshold, subs=False) -> bool:
         if fuzz.ratio(word1.lower(), word2.lower()) > threshold:
             return True
         else:

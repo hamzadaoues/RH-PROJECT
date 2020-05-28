@@ -5,12 +5,15 @@ import pandas as pd
 from ExtractSkills import ExtractSkills
 from ReadDB import ReadDB
 
-DB_PATH = r'C:\Users\User\Desktop\PFA\classification\sample1.json'
+DB_PATH = r'C:\Users\User\Desktop\PFA\sample_analyse.json'
 Extractor = ExtractSkills()
 DB_reader = ReadDB(Extractor)
 
 skills_list = ['java', 'expressjs', 'sql', 'nosql', 'javascript', 'koajs', 'hapijs', 'nodejs', 'angularjs', 'reactjs',
-               'jquery', 'bash', 'nginx', 'c', 'c++', 'symfony', 'restful', 'git', 'php']
+               'jquery', 'bash', 'nginx', 'c', 'c++', 'symfony', 'restful', 'git', 'php', 'html', 'webpack',
+               'microservices', 'css', 'postcss', 'gitlab', 'docker', 'aws', 'sass', 'linux', 'svn', 'jira', 'mongodb',
+               'mysql', 'jee', 'spring', 'extjs', 'soap', 'scrum', 'drupal', 'springboot', 'springsecurity',
+               'confluence', 'cms', 'soa', 'testing', 'analyse', 'redaction', 'ci', 'embedded', 'fullstackjs']
 # This map will hold the list of matchers for each skill
 skills_matching_list = {}
 
@@ -59,6 +62,6 @@ for index, profile in data_frame.iterrows():
     new_profiles.append(new_profile)
 # write the new database to file
 json_profiles = json.dumps(new_profiles)
-file = open('1.json', "w")
+file = open('sample_analyse_new_struct_2.json', "w")
 file.write(json_profiles)
 file.close()
