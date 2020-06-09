@@ -5,7 +5,7 @@ import pandas as pd
 from ExtractSkills import ExtractSkills
 from ReadDB import ReadDB
 
-DB_PATH = r'C:\Users\User\Desktop\PFA\sample_analyse.json'
+DB_PATH = r'data/database_brute.json'
 Extractor = ExtractSkills()
 DB_reader = ReadDB(Extractor)
 
@@ -18,7 +18,7 @@ skills_list = ['java', 'expressjs', 'sql', 'nosql', 'javascript', 'koajs', 'hapi
 skills_matching_list = {}
 
 # Load the matchers list for each skill
-SKILL_MATCHERS_PATH = r'C:\Users\User\Desktop\PFA\dictionnary\skills.json'
+SKILL_MATCHERS_PATH = r'data/skills.json'
 f = open(SKILL_MATCHERS_PATH, "r")
 skills_matching_list = json.load(f)
 
@@ -62,6 +62,6 @@ for index, profile in data_frame.iterrows():
     new_profiles.append(new_profile)
 # write the new database to file
 json_profiles = json.dumps(new_profiles)
-file = open('sample_analyse_new_struct_2.json', "w")
+file = open('data/db_analyse_new_struct.json', "w")
 file.write(json_profiles)
 file.close()
