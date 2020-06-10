@@ -1,7 +1,7 @@
 [
   {
     "class_name": "backend",
-    "score_max" : 168,
+    "score_max" : 147,
     "skills": [
       {
         "skill_name": "javascript",
@@ -63,7 +63,7 @@
   },
   {
     "class_name": "frontend",
-    "score_max" : 152,
+    "score_max" : 133,
     "skills": [
       {
         "skill_name": "javascript",
@@ -105,7 +105,7 @@
   },
   {
     "class_name": "phpsymfony",
-    "score_max" : 80,
+    "score_max" : 70,
     "skills": [
       {
         "skill_name": "php",
@@ -127,7 +127,7 @@
   },
   {
     "class_name": "ArchitecteJee",
-    "score_max" : 144,
+    "score_max" : 126,
     "skills": [
       {
         "skill_name": "java",
@@ -157,7 +157,7 @@
   },
   {
     "class_name": "Embedded",
-    "score_max" : 96,
+    "score_max" : 84,
     "skills": [
       {
         "skill_name": "c",
@@ -179,7 +179,7 @@
   },
   {
     "class_name": "fullstackjs",
-    "score_max" : 208,
+    "score_max" : 182,
     "skills": [
       {
         "skill_name": "fullstackjs",
@@ -225,7 +225,7 @@
   },
   {
     "class_name": "java/jee",
-    "score_max" : 240,
+    "score_max" : 210,
     "skills": [
       {
         "skill_name": "java",
@@ -283,7 +283,7 @@
   },
   {
     "class_name": "DRUPAL",
-    "score_max" : 128,
+    "score_max" : 112,
     "skills": [
       {
         "skill_name": "php",
@@ -325,7 +325,7 @@
   },
   {
     "class_name": "PO",
-    "score_max" : 144,
+    "score_max" : 126,
     "skills": [
       {
         "skill_name": "scrum",

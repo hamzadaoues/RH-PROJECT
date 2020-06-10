@@ -1,8 +1,9 @@
 import pandas as pd
 import json
+import pandas as pd
+import openpyxl
 
-
-# this function return the score of a skill in a profile ( hav to eb customized)
+# this function return the score of a skill in a profile ( have to be customized )
 def score_profile_per_skill(profile, skill, config):
     score_to_return = 0
     headline = profile['headline']
@@ -30,7 +31,7 @@ def score_profile_per_class(profile, classe, config):
     return format((final_score / classe['score_max']) * 100, '.2f')
 
 
-DB_PATH = r'files/sample_analyse_new_struct_3.json'
+DB_PATH = r'C:\Users\User\Desktop\PFA\classification\projet\sample_analyse_new_struct.json'
 CLASS_PATH = r'C:\Users\User\Desktop\PFA\classification\projet\classes.json'
 CONFIG_PATH = r'C:\Users\User\Desktop\PFA\classification\projet\config.json'
 # Load the classes ( JSON format )
@@ -57,16 +58,16 @@ for profile in profile_list:
     for classe in classes:
         score = float(score_profile_per_class(profile, classe, config['scoring']))
         profile_affectation[classe['class_name']] = score
-        # Tag the profile with the appropriate class ( which hav the highest score )
-        if score > max_score:
-            max_score = score
-            class_name = classe['class_name']
-    profile_affectation['class_name'] = class_name
-    profile_affectation['score'] = max_score
+        # Tag the profile with the appropriate class ( which hav the highest score ) classification simple
+        #if score > max_score:
+            #max_score = score
+            #class_name = classe['class_name']
+    #profile_affectation['class_name'] = class_name
+    #profile_affectation['score'] = max_score
     profiles.append(profile_affectation)
 
 json_profiles = json.dumps(profiles)
-file = open('files/sample_recommendation_approach2.json', "w")
+file = open('sample_analyse_result.json', "w")
 file.write(json_profiles)
 file.close()
 

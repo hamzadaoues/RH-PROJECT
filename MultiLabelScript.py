@@ -1,8 +1,8 @@
 # This script aims to assign each profile (cv) to a class : Finally the result will be list of profiles for each class
 import json
 
-PROFILES_PATH = r'C:\Users\User\Desktop\PFA\classification\projet\sample_analyse_result.json'
-CLASS_PATH = r'C:\Users\User\Desktop\PFA\classification\projet\classes.json'
+PROFILES_PATH = r'sample_analyse_result.json'
+CLASS_PATH = r'data/classes.json'
 
 # Load the profiles
 f = open(PROFILES_PATH, "r")
@@ -33,6 +33,6 @@ for classe in classes:
             multiLabelClass[class_name]['profiles_list'].append(profile['id'])
 
 multiLabelClassJson = json.dumps(multiLabelClass)
-file = open('multiLabelClass.json', "w")
+file = open('data/multiLabelClass.json', "w")
 file.write(multiLabelClassJson)
 file.close()

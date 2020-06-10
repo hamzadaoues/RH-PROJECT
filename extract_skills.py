@@ -3,7 +3,7 @@ from ExtractSkills import ExtractSkills
 from ReadDB import ReadDB
 import itertools
 
-DB_PATH = r'C:\Users\User\Desktop\PFA\database_brute.json'
+DB_PATH = r'data\database_brute.json'
 skills_list = ['git', 'scrum', 'testing', 'confluence', 'drupal', 'springboot']
 # This map will hold the list of matchers for each skill
 skills_matching_list = {}

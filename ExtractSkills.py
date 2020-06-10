@@ -2,7 +2,6 @@ from fuzzywuzzy import fuzz
 from spacy.lang.fr import French
 import re
 
-
 class ExtractSkills:
     def __init__(self):
         self.nlp = French()
