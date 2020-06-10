@@ -24,9 +24,10 @@ SKILL_MATCHERS_PATH = r'data/skills.json'
 f = open(SKILL_MATCHERS_PATH, "r")
 skills_matching_list = json.load(f)
 
-# Load the database ( in JSON format )
+# Load the original database ( in JSON format )
 data_frame = pd.read_json(DB_PATH, lines=True, encoding='utf-8')
-# list that will hold new profiles ( with new structure )
+
+# List that will hold new profiles ( with new structure )
 new_profiles = []
 
 # Load Schools dict
@@ -113,7 +114,7 @@ def avg_experience_profile(jobs):
         return 0
     return total / coef
 
-# Clean & classify given school
+# Clean & classify a given school
 def school_process(school) :
     english_stopwords = stopwords.words('english')
     french_stopwords = stopwords.words('french')
@@ -170,9 +171,11 @@ def school_process(school) :
 
 # Update location
 data_frame.personal_info = update_location(data_frame.personal_info)
+
 # Extract skill list
 skills_list = extract_skill_list()
 
+# Process
 for index, profile in data_frame.iterrows():
     new_profile = {'id': profile['_id']['$oid'], 'location': profile['personal_info']['location'], 'school': 2}
     # Calculate Total experience and avg experience
@@ -216,10 +219,10 @@ for index, profile in data_frame.iterrows():
 
     new_profiles.append(new_profile)
 
-# write the new database to file
+# Write the new database to file
 json_profiles = json.dumps(new_profiles)
 final = pd.DataFrame(new_profiles)
-final.to_excel(r'data\test.xlsx', index=False)
+#final.to_excel(r'data\test.xlsx', index=False)
 file = open('data/db_analyse_new_struct.json', "w")
 file.write(json_profiles)
 file.close()
