@@ -30,7 +30,7 @@ def score_profile_per_class(profile, classe, config):
     return format((final_score / classe['score_max']) * 100, '.2f')
 
 
-DB_PATH = r'C:\Users\User\Desktop\PFA\classification\projet\sample_analyse_new_struct.json'
+DB_PATH = r'files/sample_analyse_new_struct_3.json'
 CLASS_PATH = r'C:\Users\User\Desktop\PFA\classification\projet\classes.json'
 CONFIG_PATH = r'C:\Users\User\Desktop\PFA\classification\projet\config.json'
 # Load the classes ( JSON format )
@@ -50,7 +50,8 @@ f.close()
 
 profiles = []
 for profile in profile_list:
-    profile_affectation = {"id": profile['id']}
+    profile_affectation = {"id": profile['id'], 'location': profile['location'],
+                           'total_experience': profile['total_experience'], 'stability': profile['stability']}
     max_score = 0
     class_name = False
     for classe in classes:
@@ -65,7 +66,7 @@ for profile in profile_list:
     profiles.append(profile_affectation)
 
 json_profiles = json.dumps(profiles)
-file = open('sample_analyse_result.json', "w")
+file = open('files/sample_recommendation_approach2.json', "w")
 file.write(json_profiles)
 file.close()
 
